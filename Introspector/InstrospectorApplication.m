@@ -10,10 +10,10 @@
 
 @implementation InstrospectorApplication
 
-- (void)_handleNonLaunchSpecificActions:(id)actions forScene:(id)scene withTransitionContext:(NSDictionary *)context completion:(id)completion
-{
-   
-}
+//- (void)_handleNonLaunchSpecificActions:(id)actions forScene:(id)scene withTransitionContext:(NSDictionary *)context completion:(id)completion
+//{
+//    NSLog(@"---- ----\nactions: %@\ncontext: %@\ncompletion: %@", actions, context, completion);
+//}
 
 @end
 
