@@ -16,6 +16,9 @@
 		46BC4D511C5DC3700009DDB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46BC4D4F1C5DC3700009DDB7 /* LaunchScreen.storyboard */; };
 		46BC4D5C1C5DC3700009DDB7 /* IntrospectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC4D5B1C5DC3700009DDB7 /* IntrospectorTests.m */; };
 		46BC4D671C5DC3700009DDB7 /* IntrospectorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC4D661C5DC3700009DDB7 /* IntrospectorUITests.m */; };
+		46BC4D801C5DC3A50009DDB7 /* libMAObjCRuntime_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BC4D7D1C5DC3850009DDB7 /* libMAObjCRuntime_iOS.a */; };
+		46BC4D831C5DD9260009DDB7 /* InstrospectorApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC4D821C5DD9260009DDB7 /* InstrospectorApplication.m */; };
+		46BC4D861C5E3DD20009DDB7 /* INTIntrospector.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC4D851C5E3DD20009DDB7 /* INTIntrospector.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +35,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = 46BC4D3A1C5DC3700009DDB7;
 			remoteInfo = Introspector;
+		};
+		46BC4D7A1C5DC3850009DDB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46BC4D741C5DC3850009DDB7 /* MAObjCRuntime.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DD76FA10486AA7600D96B5E;
+			remoteInfo = MAObjCRuntime;
+		};
+		46BC4D7C1C5DC3850009DDB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46BC4D741C5DC3850009DDB7 /* MAObjCRuntime.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 22A07AE215241A3B008A2A36;
+			remoteInfo = MAObjCRuntime_iOS;
+		};
+		46BC4D7E1C5DC3850009DDB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46BC4D741C5DC3850009DDB7 /* MAObjCRuntime.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 22A07AF115241A3B008A2A36;
+			remoteInfo = MAObjCRuntime_iOSTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -54,6 +78,11 @@
 		46BC4D621C5DC3700009DDB7 /* IntrospectorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntrospectorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46BC4D661C5DC3700009DDB7 /* IntrospectorUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntrospectorUITests.m; sourceTree = "<group>"; };
 		46BC4D681C5DC3700009DDB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46BC4D741C5DC3850009DDB7 /* MAObjCRuntime.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MAObjCRuntime.xcodeproj; path = ../../MAObjCRuntime/xcode/MAObjCRuntime.xcodeproj; sourceTree = "<group>"; };
+		46BC4D811C5DD9260009DDB7 /* InstrospectorApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstrospectorApplication.h; sourceTree = "<group>"; };
+		46BC4D821C5DD9260009DDB7 /* InstrospectorApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstrospectorApplication.m; sourceTree = "<group>"; };
+		46BC4D841C5E3DD20009DDB7 /* INTIntrospector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INTIntrospector.h; sourceTree = "<group>"; };
+		46BC4D851C5E3DD20009DDB7 /* INTIntrospector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INTIntrospector.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46BC4D801C5DC3A50009DDB7 /* libMAObjCRuntime_iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,14 +136,19 @@
 			children = (
 				46BC4D411C5DC3700009DDB7 /* AppDelegate.h */,
 				46BC4D421C5DC3700009DDB7 /* AppDelegate.m */,
+				46BC4D811C5DD9260009DDB7 /* InstrospectorApplication.h */,
+				46BC4D821C5DD9260009DDB7 /* InstrospectorApplication.m */,
 				46BC4D441C5DC3700009DDB7 /* MasterViewController.h */,
 				46BC4D451C5DC3700009DDB7 /* MasterViewController.m */,
 				46BC4D471C5DC3700009DDB7 /* DetailViewController.h */,
 				46BC4D481C5DC3700009DDB7 /* DetailViewController.m */,
+				46BC4D841C5E3DD20009DDB7 /* INTIntrospector.h */,
+				46BC4D851C5E3DD20009DDB7 /* INTIntrospector.m */,
 				46BC4D4A1C5DC3700009DDB7 /* Main.storyboard */,
 				46BC4D4D1C5DC3700009DDB7 /* Assets.xcassets */,
 				46BC4D4F1C5DC3700009DDB7 /* LaunchScreen.storyboard */,
 				46BC4D521C5DC3700009DDB7 /* Info.plist */,
+				46BC4D741C5DC3850009DDB7 /* MAObjCRuntime.xcodeproj */,
 				46BC4D3E1C5DC3700009DDB7 /* Supporting Files */,
 			);
 			path = Introspector;
@@ -143,6 +178,16 @@
 				46BC4D681C5DC3700009DDB7 /* Info.plist */,
 			);
 			path = IntrospectorUITests;
+			sourceTree = "<group>";
+		};
+		46BC4D751C5DC3850009DDB7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				46BC4D7B1C5DC3850009DDB7 /* MAObjCRuntime */,
+				46BC4D7D1C5DC3850009DDB7 /* libMAObjCRuntime_iOS.a */,
+				46BC4D7F1C5DC3850009DDB7 /* MAObjCRuntime_iOSTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +257,7 @@
 				TargetAttributes = {
 					46BC4D3A1C5DC3700009DDB7 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = HK64RUWW3P;
 					};
 					46BC4D561C5DC3700009DDB7 = {
 						CreatedOnToolsVersion = 7.2;
@@ -234,6 +280,12 @@
 			mainGroup = 46BC4D321C5DC3700009DDB7;
 			productRefGroup = 46BC4D3C1C5DC3700009DDB7 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 46BC4D751C5DC3850009DDB7 /* Products */;
+					ProjectRef = 46BC4D741C5DC3850009DDB7 /* MAObjCRuntime.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				46BC4D3A1C5DC3700009DDB7 /* Introspector */,
@@ -242,6 +294,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		46BC4D7B1C5DC3850009DDB7 /* MAObjCRuntime */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = MAObjCRuntime;
+			remoteRef = 46BC4D7A1C5DC3850009DDB7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		46BC4D7D1C5DC3850009DDB7 /* libMAObjCRuntime_iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMAObjCRuntime_iOS.a;
+			remoteRef = 46BC4D7C1C5DC3850009DDB7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		46BC4D7F1C5DC3850009DDB7 /* MAObjCRuntime_iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = MAObjCRuntime_iOSTests.xctest;
+			remoteRef = 46BC4D7E1C5DC3850009DDB7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		46BC4D391C5DC3700009DDB7 /* Resources */ = {
@@ -278,6 +354,8 @@
 				46BC4D431C5DC3700009DDB7 /* AppDelegate.m in Sources */,
 				46BC4D461C5DC3700009DDB7 /* MasterViewController.m in Sources */,
 				46BC4D401C5DC3700009DDB7 /* main.m in Sources */,
+				46BC4D861C5E3DD20009DDB7 /* INTIntrospector.m in Sources */,
+				46BC4D831C5DD9260009DDB7 /* InstrospectorApplication.m in Sources */,
 				46BC4D491C5DC3700009DDB7 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +497,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Introspector/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mosheberman.Introspector;
@@ -430,6 +509,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Introspector/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mosheberman.Introspector;
