@@ -19,6 +19,15 @@
     BOOL invalid;
 }
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _targetClass = [NSObject class];
+    }
+    return self;
+}
+
 #pragma mark - Managing the detail item
 
 - (void)setTargetClass:(Class)targetClass
@@ -34,7 +43,19 @@
     
     if (self.targetClass)
     {
-        self.navigationItem.prompt = NSStringFromClass(self.targetClass);
+        NSString *classString = NSStringFromClass(self.targetClass);
+        Class superclass = [[self.targetClass superclass] class];
+        
+        NSString *superClassString = NSStringFromClass(superclass);
+        
+        if (superClassString) {
+            self.navigationItem.prompt = [NSString stringWithFormat:@"%@ (%@)", classString, superClassString];
+        }
+        else
+        {
+            self.navigationItem.prompt = classString;
+        }
+        
         [self.tableView reloadData];
     }
 }
@@ -108,6 +129,10 @@
         if (self.viewToggle.selectedSegmentIndex == 0)
         {
             cell.detailTextLabel.text = [[[INTIntrospector alloc] init] propertiesOfClass:self.targetClass][title];
+        }
+        else
+        {
+            cell.detailTextLabel.text = nil;
         }
     }
 
