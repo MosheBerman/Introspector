@@ -20,12 +20,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
     INTIntrospector *i = [[INTIntrospector alloc] init];
     
     Class targetClass = NSClassFromString(@"NSObject");
     self.objects = [i subclassesOfClass:targetClass];
+
+    self.title = [NSString stringWithFormat:@"%u Classes", self.objects.count];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
