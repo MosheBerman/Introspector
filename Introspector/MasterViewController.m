@@ -97,7 +97,25 @@
         NSString *name = NSStringFromClass(c);
         
         NSString *lowercaseSearch = self.searchBar.text.lowercaseString;
-        if ([[name lowercaseString] rangeOfString:lowercaseSearch].location != NSNotFound)
+        
+        BOOL match = false;
+        
+        if ([lowercaseSearch hasSuffix:@"*"])
+        {
+            lowercaseSearch = [lowercaseSearch stringByReplacingOccurrencesOfString:@"*" withString:@""];
+            match = [[name lowercaseString] hasPrefix:lowercaseSearch];
+        }
+        else if([lowercaseSearch hasPrefix:@"*"])
+        {
+            lowercaseSearch = [lowercaseSearch stringByReplacingOccurrencesOfString:@"*" withString:@""];
+            match = [[name lowercaseString] hasSuffix:lowercaseSearch];
+        }
+        else
+        {
+            match = [[name lowercaseString] rangeOfString:lowercaseSearch].location != NSNotFound;
+        }
+        
+        if (match == YES)
         {
             return YES;
         }
